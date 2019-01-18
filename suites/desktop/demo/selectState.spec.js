@@ -19,7 +19,7 @@ describe(`User should be able to use the dropdown menu to look up states capital
     });
 
 
-    for (let i = 0; i < 3; i++) {   //StatesInfo.RestResponse.result.length
+    for (let i = 0; i < 9; i++) {   //StatesInfo.RestResponse.result.length
         // const img2 = `${os.userInfo().homedir}/fet-e2e/corp_sites/actual_images/${argv.suite.toLowerCase()}_desktop/${allElements[i].text}.png`;
 
         it(`Once page loaded, user can select (${StatesInfo.RestResponse.result[i].name})`, () => {
