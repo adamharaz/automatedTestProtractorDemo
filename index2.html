@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+    <p>Select a state:</p>
+
+    <select ng-model="selectedState" ng-options="x for (x, y) in states">
+    </select>
+
+    <h1 data-qa="stateName">You Selected state:{{selectedState.name}}</h1>
+    <h2 data-qa="stateCapital">Capital City:{{selectedState.capital}}</h2>
+    <h3 data-qa="stateLargestCity">Largest City:{{selectedState.largestCity}}</h3>
+
+    <p>Select more states and find out their capitals and largest cities</p>
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function ($scope) {
+        $scope.states = {
+            Alabama: {name: "Alabama", capital: "Montgomery", largestCity: "Birmingham"},
+            Alaska: {name: "Alaska", capital: "Juneau", largestCity: "Anchorage"},
+            Arizona: {name: "Arizona", capital: "Phoenix", largestCity: "Phoenix"},
+
+            Alabama:{}
+
+        }
+    });
+
+
+    function outputStates(attribute) {
+        const app = document.getElementById('root');
+
+        var request = new XMLHttpRequest();
+        request.open('GET', 'http:services.groupkt.com/state/get/USA/all', true);
+        request.onload = function () {
+
+            // Begin accessing JSON data here
+            var data = JSON.parse(this.response);
+            if (request.status >= 200 && request.status < 400) {
+
+
+                document.getElementById("root").innerHTML = data.RestResponse.result[0].attribute;
+
+                // reutrn data.RestResponse.result[0].attribute;
+
+
+            } else {
+                const errorMessage = document.createElement('marquee');
+                errorMessage.textContent = `Gah, it's not working!`;
+                app.appendChild(errorMessage);
+            }
+        };
+
+        request.send();
+    }
+
+
+</script>
+
+</body>
+</html>

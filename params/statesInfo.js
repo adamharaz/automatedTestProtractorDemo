@@ -229,7 +229,7 @@ module.exports = {
         }, {
             "id": 29,
             "country": "USA",
-            "name": "New Hampshire",
+            "name": "New_Hampshire",
             "abbr": "NH",
             "area": "24214SKM",
             "largest_city": "Manchester",
@@ -237,7 +237,7 @@ module.exports = {
         }, {
             "id": 30,
             "country": "USA",
-            "name": "New Jersey",
+            "name": "New_Jersey",
             "abbr": "NJ",
             "area": "22591SKM",
             "largest_city": "Newark",
@@ -245,7 +245,7 @@ module.exports = {
         }, {
             "id": 31,
             "country": "USA",
-            "name": "New Mexico",
+            "name": "New_Mexico",
             "abbr": "NM",
             "area": "314917SKM",
             "largest_city": "Albuquerque",
@@ -253,7 +253,7 @@ module.exports = {
         }, {
             "id": 32,
             "country": "USA",
-            "name": "New York",
+            "name": "New_York",
             "abbr": "NY",
             "area": "141297SKM",
             "largest_city": "New York City",
@@ -261,7 +261,7 @@ module.exports = {
         }, {
             "id": 33,
             "country": "USA",
-            "name": "North Carolina",
+            "name": "North_Carolina",
             "abbr": "NC",
             "area": "139391SKM",
             "largest_city": "Charlotte",
@@ -269,7 +269,7 @@ module.exports = {
         }, {
             "id": 34,
             "country": "USA",
-            "name": "North Dakota",
+            "name": "North_Dakota",
             "abbr": "ND",
             "area": "183108SKM",
             "largest_city": "Fargo",
@@ -309,7 +309,7 @@ module.exports = {
         }, {
             "id": 39,
             "country": "USA",
-            "name": "Rhode Island",
+            "name": "Rhode_Island",
             "abbr": "RI",
             "area": "1034SKM",
             "largest_city": "Providence",
@@ -317,7 +317,7 @@ module.exports = {
         }, {
             "id": 40,
             "country": "USA",
-            "name": "South Carolina",
+            "name": "South_Carolina",
             "abbr": "SC",
             "area": "82933SKM",
             "largest_city": "Charleston",
@@ -325,7 +325,7 @@ module.exports = {
         }, {
             "id": 41,
             "country": "USA",
-            "name": "South Dakota",
+            "name": "South_Dakota",
             "abbr": "SD",
             "area": "199729SKM",
             "largest_city": "Sioux Falls",
@@ -381,7 +381,7 @@ module.exports = {
         }, {
             "id": 48,
             "country": "USA",
-            "name": "West Virginia",
+            "name": "West_Virginia",
             "abbr": "WV",
             "area": "24038SKM",
             "largest_city": "Charleston",
@@ -402,41 +402,6 @@ module.exports = {
             "area": "97093SKM",
             "largest_city": "Cheyenne",
             "capital": "Cheyenne"
-        }, {
-            "id": 51,
-            "country": "USA",
-            "name": "American Samoa",
-            "abbr": "AS",
-            "area": "1505SKM",
-            "capital": "Pago Pago"
-        }, {
-            "id": 52,
-            "country": "USA",
-            "name": "Guam",
-            "abbr": "GU",
-            "area": "1478SKM",
-            "capital": "Hagåtña"
-        }, {
-            "id": 53,
-            "country": "USA",
-            "name": "Northern Mariana Islands",
-            "abbr": "MP",
-            "area": "5117SKM",
-            "capital": "Saipan"
-        }, {
-            "id": 54,
-            "country": "USA",
-            "name": "Puerto Rico",
-            "abbr": "PR",
-            "area": "13791SKM",
-            "capital": "San Juan"
-        }, {
-            "id": 55,
-            "country": "USA",
-            "name": "U.S. Virgin Islands",
-            "abbr": "VI",
-            "area": "1898SKM",
-            "capital": "Charlotte Amalie"
         }]
     }
 

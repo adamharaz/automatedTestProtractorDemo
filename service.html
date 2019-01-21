@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+
+</script>
+<head></head>
+<body ng-app="Myapp">
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <div ng-controller="Mycontroller">
+        {{myWelcome}}}
+    </div>
+
+</body>
+
+<script>
+
+    var app=angular.module("myapp" , []);
+    app.controller("Mycontroller", function ($http, $rootScoper) {
+        $http.get("http://services.groupkt.com/state/get/USA/all").
+            then(function (response) {
+            $rootScope.myWelcome = response.data;
+        });
+    });
+
+</script>
+</html>

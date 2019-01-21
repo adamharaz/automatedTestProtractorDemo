@@ -47,28 +47,15 @@ const setBrowser = (br) => {
 
 const setBaseURL = (env) => {
     switch (env) {
-        case  'f55_uat':
-            baseUrlF55 = `https://gwl:gwl@uat.freedom55financial.com/`;
-            baseUrlFrF55 = `https://gwl:gwl@uat.freedom55financial.com/fr.html`;
-            heroTxtF55 = `Low-cost holiday gift ideas that celebrate the spirit of giving`;
-            heroTxtFrF55 = `Idées cadeaux à petit prix pour souligner l'esprit de partage du temps des Fêtes`;
-            environment = 'gwl:gwl@uat';
+        case  'env1':
+
             break;
-        case  'f55_pr':
-            baseUrlF55 = `https://www.freedom55financial.com/`;
-            baseUrlFrF55 = `https://www.freedom55financial.com/fr.html`;
-            heroTxtF55 = `Low-cost holiday gift ideas that celebrate the spirit of giving`;
-            heroTxtFrF55 = `Idées cadeaux à petit prix pour souligner l'esprit de partage du temps des Fêtes`;
-            environment = 'www';
+        case  'env2':
+
             break;
         default:
             throw new Error('You did not specify a known environment in the command line');
     }
-};
-
-const disableAngularPageStateDetection = () => {
-    browser.ignoreSynchronization = true;
-    browser.waitForAngularEnabled(false);
 };
 
 const browserToUse = () => {
@@ -109,7 +96,6 @@ const config = {
         maxInstances: 30,    //use 30 instances
         browserName: setBrowser(argv.br),
         chromeOptions: {
-            // http://peter.sh/experiments/chromium-command-line-switches/
             args: ['incognito', '--disable-cache', '--disable-extensions'],
         },
     },
@@ -120,7 +106,6 @@ const config = {
         require('./helpers/waitReady.js');  // eslint-disable-line global-require
         require('./helpers/waitAbsent.js'); // eslint-disable-line global-require
         setupReporters();
-        disableAngularPageStateDetection();
         setBrowserWindowSize();
     },
 
@@ -135,7 +120,7 @@ function setupReporters() {
     }));
 
     const now = new Date();
-    const savePath = `${os.userInfo().homedir}/fet-e2e/corp_sites/Reports/Desktop_`
+    const savePath = `${os.userInfo().homedir}/node-rest-states/Reports/Desktop_`
         + argv.suite.toUpperCase() + '_' + now.toDateString() + ' ' + now.getHours() + '-' + now.getMinutes() + '-' + now.getSeconds() + "/";
 
 

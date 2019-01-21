@@ -1,0 +1,33 @@
+<script>
+    function change_myselect(sel) {
+        var obj, dbParam, xmlhttp, myObj, x, txt = "";
+        obj = { "table":sel, "limit":20 };
+        dbParam = JSON.stringify(obj);
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                myObj = JSON.parse(this.responseText);
+                txt += "<table border='1'>"
+                for (x in myObj) {
+                    txt += "<tr><td>" + myObj[x].name + "</td></tr>";
+                }
+                txt += "</table>"
+                document.getElementById("demo").innerHTML = txt;
+            }
+        };
+        xmlhttp.open("POST", "get_email.php", true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.send("x=" + dbParam);
+    }
+</script>
+
+
+<select id="get_email" name="get_email" onchange="change_myselect(this.value)">
+    <option value="">Choose an option:</option>
+    <option value="3">Customers</option>
+    <option value="4">Products</option>
+    <option value="5">Suppliers</option>
+</select>
+
+
+<p id="demo"></p>
