@@ -1,0 +1,52 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add os
+
+PATH: 
+  /Users/adamharris/Library/Android/sdk/tools:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands
+  export PATH
+  
+  PATH=/Users/adamharris/Library/Android/sdk/tools/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands
+
+Yarn version: 
+  1.13.0
+
+Node version: 
+  8.9.4
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: EACCES: permission denied, unlink '/Users/adamharris/node-rest-states/node_modules/os/LICENSE'
+
+npm manifest: 
+  {
+    "name": "rest-states",
+    "version": "1.0.0",
+    "description": "A Node.js RESTFUL Service for US states and capital cities",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+      "node",
+      "restful",
+      "api"
+    ],
+    "author": "Adam Haraz",
+    "license": "ISC",
+    "dependencies": {
+      "optimist": "^0.6.1",
+      "protractor-jasmine2-html-reporter": "^0.0.7",
+      "jasmine-spec-reporter": "^4.2.1",
+      "url": "^0.11.0",
+      "url-parse": "^1.4.3",
+      "xmlhttprequest": "^1.8.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

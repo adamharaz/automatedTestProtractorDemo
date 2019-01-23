@@ -14,7 +14,12 @@
   "author": "Adam Haraz",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4",
-    "os": "^0.1.1"
+    "jasmine-spec-reporter": "^4.2.1",
+    "optimist": "^0.6.1",
+    "os": "^0.1.1",
+    "protractor-jasmine2-html-reporter": "^0.0.7",
+    "url": "^0.11.0",
+    "url-parse": "^1.4.3",
+    "xmlhttprequest": "^1.8.0"
   }
 }
