@@ -12,8 +12,11 @@ download and install:
 - install npm packages: as follows:
   npm install jasmine-spec-reporter optimist os protractor-jasmine2-html-reporter url url-parse xmlhttprequest
   Or you can use Yarn visit: https://yarnpkg.com/lang/en/docs/cli/add/
-  All dependencies listed in package.json and versions
-- From command line or WebStorm terminal: run protractor ../../../Users/adamharris/node-rest-states/base.conf.js --suite=demo --disableChecks
+  All dependencies listed in package.json and their versions
+- To start the tests From command line or WebStorm terminal
+  cd into project `node-rest-states` and run run `base,conf.js` as follows:
+- `protractor ../../../Users/<username>/node-rest-states/base.conf.js --suite=demo --disableChecks`
+- Base.conf.js file that runs all specs(tests), demo is the name of the suite which included in base.conf.js file
   or you can do that from the terminal
 - See reports of the tests under reports folder Deskyop-demo-date
 - page_objects directory includes all the page objects like elements of the page
