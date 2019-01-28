@@ -1,4 +1,5 @@
-/* eslint-env node, jasmine, protractor */
+/*
+/!* eslint-env node, jasmine, protractor *!/
 const SpecReporter = require('jasmine-spec-reporter').SpecReporter;
 const Jasmine2HtmlReporter = require("protractor-jasmine2-html-reporter");
 const argv = require('optimist').argv;
@@ -85,7 +86,7 @@ const config = {
     directConnect: true,
 
     suites: {
-        demo: 'suites/desktop/demo/*.spec.js',
+        demo: 'suites/desktop/demo/!*.spec.js',
     },
 
     framework: 'jasmine2',
@@ -174,3 +175,4 @@ function setupReporters() {
 }
 
 module.exports.config = config;
+*/

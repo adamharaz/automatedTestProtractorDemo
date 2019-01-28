@@ -1,20 +1,20 @@
 /* eslint-env jasmine, protractor */
 
 const fs = require('fs');
-const os = require('os');
+//const os = require('os');
 const now = new Date();
-const Url = require('url-parse');
-const argv = require('optimist').argv;
+//const Url = require('url-parse');
+//const argv = require('optimist').argv;
 const Meta = require('./Meta.js');
 
 class BrowserUtil {
-    static verifyRelativePath(relativePath) {
+/*    static verifyRelativePath(relativePath) {
         browser.getCurrentUrl().then((currentUrl) => {
             const parsedUrl = new Url(currentUrl);
             const msg = `failed: expected page url to be "${relativePath}" but instead found "${parsedUrl.pathname}"`;
             expect(parsedUrl.pathname).toContain(relativePath, msg);
         });
-    }
+    }*/
 
     static isPageReady() {
         executeInBrowser(()=>{
@@ -46,7 +46,7 @@ class BrowserUtil {
                 return text === returnedTxt;
             });
         }).first().click();
-        BrowserUtil.outputBrowserLogs();
+        //BrowserUtil.outputBrowserLogs();
     }
 
     static clickElementByTxtMobile(cssSelector, returnedTxt) {
@@ -118,7 +118,7 @@ class BrowserUtil {
         // expect(headMetaTag.getAttribute(`name`).toEqual(`robots`));  //TODO follow up with Harmeet
     }
 
-    static outputBrowserLogs() {
+/*    static outputBrowserLogs() {
         const timestamp = '/' + now.toDateString() + ' ' + now.getHours() + '-' + now.getMinutes() + '-';
         browser.manage().logs().get('browser').then(function (browserLog) {
             // console.log('LOG: ' + require('util').inspect(browserLog));
@@ -130,7 +130,7 @@ class BrowserUtil {
                     // console.warn(`Logs have been saved!`);
                 });
         });
-    }
+    }*/
 }
 
 module.exports = BrowserUtil;
