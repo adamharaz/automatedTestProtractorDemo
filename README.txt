@@ -2,6 +2,7 @@ Installation Instructions
 =========================
 download and install:
 
+- Git clone the project or git fetch/git pull/
 - node.js: https://nodejs.org/
 - WebStorm: https://www.jetbrains.com/webstorm/ or your prefered IDE
 - run from command line:
