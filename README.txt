@@ -15,7 +15,7 @@ download and install:
   Or you can use Yarn visit: https://yarnpkg.com/lang/en/docs/cli/add/
   All dependencies listed in package.json and versions
 *************************Avoid the above step only and execute the rest ********************************************
-- From command line or WebStorm terminal: run protractor ../../../Users/adamharris/node-rest-states/conf.js
+- From command line or WebStorm terminal: run:   `protractor <map to conf.js>/node-rest-states/conf.js`
   or you can do that from the terminal
 - See reports of the tests under reports folder Deskyop-demo-date
 - page_objects directory includes all the page objects like elements of the page
