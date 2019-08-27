@@ -10,7 +10,7 @@ const statPO = new statePageObjects();
 describe(`User should be able to use the dropdown menu to look up states capital cities and their largest cities`, () => {
 
     it(`User should be able to load states portal`, () => {
-        browser.driver.get(`file:///${os.userInfo().homedir}/node-rest-states/index.html`);
+        browser.driver.get(`file:///${os.userInfo().homedir}/Documents/node-rest-states/index.html`);
         BrowserFacade.isPageSettled();
     });
 
@@ -20,11 +20,12 @@ describe(`User should be able to use the dropdown menu to look up states capital
             BrowserFacade.isPageSettled();
         });
 
-        it(`Once (${StatesInfo.RestResponse.result[i].name}) selected
+        it(`Once (${StatesInfo.RestResponse.result[i].name}) is selected
                 user should see (You Selected State) and the state selected next to it, `, () => {
             statPO.$stateName.getText().then(function (txt) {
                 expect(txt.split(`:`).pop()).toBe(StatesInfo.RestResponse.result[i].name);
             });
+            BrowserFacade.isPageSettled();
         });
 
         it(`User should also see (${StatesInfo.RestResponse.result[i].capital})
@@ -36,9 +37,11 @@ describe(`User should be able to use the dropdown menu to look up states capital
 
         it(`User should also see (${StatesInfo.RestResponse.result[i].largest_city})
                 as its Largest City, `, () => {
+                    const img2 = `${os.userInfo().homedir}/Documents/e2e/automatedTestProtractorDemo/actual_images/${StatesInfo.RestResponse.result[i].name}.png`;
             statPO.$stateLargestCity.getText().then(function (txt) {
                 expect(txt.split(`:`).pop()).toBe(StatesInfo.RestResponse.result[i].largest_city);
             });
+            Images.takeFullScreenshotForCurrentUrl(img2);
         });
     }
 

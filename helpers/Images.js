@@ -1,5 +1,5 @@
 /* eslint-env jasmine, protractor */
-// Todo refactor Adam please
+// ToDo refactor 
 const fs = require('fs');
 // const PNG = require('pngjs').PNG;
 const PNGDiff = require('png-diff');

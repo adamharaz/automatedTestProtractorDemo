@@ -14,12 +14,21 @@
   "author": "Adam Haraz",
   "license": "ISC",
   "dependencies": {
+    "blink-diff": "^1.0.13",
+    "capture-screenshot": "^2.0.5",
     "jasmine-spec-reporter": "^4.2.1",
+    "looks-same": "^7.2.1",
     "optimist": "^0.6.1",
     "os": "^0.1.1",
-    "protractor-jasmine2-html-reporter": "^0.0.7",
+    "pixelmatch": "^5.0.2",
+    "png-crop": "0.0.2",
+    "png-diff": "^0.3.3",
+    "protractor-jasmine2-html-reporter": "0.0.7",
+    "screenshot-node": "^1.2.1",
+    "screenshot-stream": "^4.2.0",
     "url": "^0.11.0",
-    "url-parse": "^1.4.3",
+    "url-parse": "^1.4.7",
+    "url-to-screenshot": "^3.0.0",
     "xmlhttprequest": "^1.8.0"
   }
 }
